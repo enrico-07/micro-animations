@@ -25,7 +25,6 @@ Engineered around **27 core physical principles**—including Apple fluid interf
   - [5. In Codex & Universal AI Agents](#5-in-codex--universal-ai-agents)
 - [How to Invoke in Chat](#how-to-invoke-in-chat)
 - [Directory Structure](#directory-structure)
-- [Initial GitHub Setup Commands](#initial-github-setup-commands)
 - [Author & License](#author--license)
 
 ---
@@ -253,35 +252,6 @@ micro-animations/
     ├── micro-icon-swap.tsx  # Rule 18 & 16: Scale + blur icon morph
     ├── micro-input-shake.tsx# Rule 21: Form input error shake
     └── micro-number-ticker.tsx # Rule 23: Odometer counter roll
-```
-
----
-
-## Initial GitHub Setup Commands
-
-To push this skill repository directly to GitHub:
-
-```powershell
-# Navigate into the skill directory
-cd c:\Users\ERIC\Downloads\Antigravity_Skills\micro-animations
-
-# Initialize git repository
-git init
-
-# Stage all files
-git add .
-
-# Create the initial commit
-git commit -m "feat: initial commit for micro-animations skill suite with 27 rules, scanner CLI, and multi-agent presets"
-
-# Rename default branch to main
-git branch -M main
-
-# Link to your remote GitHub repository
-git remote add origin https://github.com/enrico-07/micro-animations.git
-
-# Push to GitHub
-git push -u origin main
 ```
 
 ---
