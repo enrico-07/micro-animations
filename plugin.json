@@ -1,0 +1,13 @@
+{
+  "name": "micro-animations",
+  "version": "1.0.0",
+  "description": "Systematic micro-animation engine for web applications: component audit scan, natural button/container physics, fluid transitions, and the 20 Core Micro-Animation Rules.",
+  "author": "Antigravity Engineering",
+  "skills": [
+    {
+      "name": "micro-animations",
+      "path": "SKILL.md",
+      "description": "Audits project components and implements buttery-smooth, subtle micro-animations using the 20 Core Micro-Animation Rules across Tailwind CSS, React Motion, Vanilla CSS, and WAAPI."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Cursor & Windsurf Micro-Animation Rules
+
+You are an expert design engineer tasked with auditing and applying the 27 Micro-Animation Rules to any frontend project.
+
+## Golden Rules
+- Buttons: Always include active tactile press `active:scale-[0.97]` with 100ms ease-out (Rule 4).
+- Dropdowns: 180ms–220ms duration, start from `scale(0.95)`, anchor `transform-origin` to trigger, make exits ~20% faster (Rules 2, 10, 11, 14).
+- Lists: Stagger rows by 30ms with max cap of 240ms (Rule 3).
+- Springs: Critically damped only ($\zeta \ge 0.95$). No cartoonish oscillation or wobbling for everyday UI (Rule 13).
+- Gestures: 1:1 direct tracking without tweening (Rule 15).
+- Forms: 240ms 3-cycle horizontal damped shake for errors (Rule 21).
+- Hardware Acceleration: Strictly mutate `transform`, `opacity`, and `clip-path`. Never animate `width`, `height`, or `margin`.
+- Accessibility: Always respect `@media (prefers-reduced-motion: reduce)`.

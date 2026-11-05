@@ -1,0 +1,92 @@
+/**
+ * Standalone Micro-Animations CSS Utility Layer
+ * 
+ * Works out-of-the-box in Vanilla CSS, CSS Modules, Vue, Svelte, or Next.js.
+ */
+
+:root {
+  --micro-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --micro-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --micro-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Rule 4: Button Press */
+.micro-press {
+  transition: transform 100ms var(--micro-ease-out);
+  user-select: none;
+}
+.micro-press:active {
+  transform: scale(0.97);
+}
+
+/* Rule 1 & 10: Popover Entrance */
+.micro-popover-enter {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 200ms var(--micro-ease-out), transform 200ms var(--micro-ease-out);
+}
+
+/* Rule 14 & 12: Popover Exit (20% shorter) */
+.micro-popover-exit {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 160ms var(--micro-ease-in), transform 160ms var(--micro-ease-in);
+}
+
+/* Rule 8: Success Pulse */
+.micro-pulse {
+  animation: micro-pulse-kf 300ms var(--micro-ease-in-out);
+}
+
+@keyframes micro-pulse-kf {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+/* Rule 21: Input Error Shake */
+.micro-shake {
+  animation: micro-shake-kf 240ms ease-in-out;
+}
+
+@keyframes micro-shake-kf {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+/* Rule 27: Scroll Micro-Float */
+.micro-float-in {
+  animation: micro-float-kf 240ms var(--micro-ease-out) forwards;
+}
+
+@keyframes micro-float-kf {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Rule 24: Shimmer Skeleton */
+.micro-shimmer {
+  background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 200%;
+  animation: micro-shimmer-kf 1200ms ease-in-out infinite;
+}
+
+@keyframes micro-shimmer-kf {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .micro-press,
+  .micro-popover-enter,
+  .micro-popover-exit,
+  .micro-pulse,
+  .micro-shake,
+  .micro-float-in,
+  .micro-shimmer {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
